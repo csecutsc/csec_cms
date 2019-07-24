@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "resource",
+    "description": "Resource block"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "items": {
+      "type": "json"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

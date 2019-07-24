@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "archived",
+  "info": {
+    "name": "archived",
+    "description": "archived misc files"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cardImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

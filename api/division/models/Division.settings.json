@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "division",
+  "info": {
+    "name": "division",
+    "description": "CSEC division"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "announcements": {
+      "collection": "announcement",
+      "via": "division"
+    },
+    "articles": {
+      "collection": "article",
+      "via": "division"
+    },
+    "seminars": {
+      "collection": "seminar",
+      "via": "division"
+    },
+    "users": {
+      "collection": "user",
+      "via": "divisions",
+      "dominant": true,
+      "plugin": "users-permissions"
+    }
+  }
+}

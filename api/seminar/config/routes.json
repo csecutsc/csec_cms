@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/seminars",
+      "handler": "Seminar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seminars/count",
+      "handler": "Seminar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seminars/:_id",
+      "handler": "Seminar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/seminars",
+      "handler": "Seminar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/seminars/:_id",
+      "handler": "Seminar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/seminars/:_id",
+      "handler": "Seminar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

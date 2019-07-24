@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "seminar",
+  "info": {
+    "name": "seminar",
+    "description": "Seminar Posts"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "resources": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "cardImage": {
+      "type": "string"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "division": {
+      "model": "division",
+      "via": "seminars"
+    }
+  }
+}

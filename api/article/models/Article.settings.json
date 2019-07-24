@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "article",
+    "description": "Guides written by CSEC members"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "articleImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "htmlText": {
+      "type": "text",
+      "required": true
+    },
+    "users": {
+      "collection": "user",
+      "dominant": true,
+      "via": "articles",
+      "plugin": "users-permissions"
+    },
+    "division": {
+      "model": "division",
+      "via": "articles"
+    }
+  }
+}
