@@ -32,6 +32,10 @@
       "collection": "seminar",
       "via": "division"
     },
+    "executives": {
+      "collection": "executive",
+      "via": "divisions"
+    },
     "users": {
       "collection": "user",
       "via": "divisions",

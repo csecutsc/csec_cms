@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "executive",
+  "info": {
+    "name": "executive",
+    "description": "exec"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "media": {
+      "type": "json"
+    },
+    "divisions": {
+      "collection": "division",
+      "via": "executives",
+      "dominant": true
+    }
+  }
+}

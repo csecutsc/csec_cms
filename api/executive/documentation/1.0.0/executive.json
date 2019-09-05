@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/articles": {
+    "/executives": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Article"
+                    "$ref": "#/components/schemas/Executive"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Executive"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Executive"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Executive"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewExecutive"
               }
             }
           }
         }
       }
     },
-    "/articles/count": {
+    "/executives/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Executive"
         ],
         "parameters": []
       }
     },
-    "/articles/{_id}": {
+    "/executives/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Executive"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Executive"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Executive"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Executive"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewExecutive"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Executive"
         ],
         "parameters": [
           {
@@ -508,23 +508,21 @@
   },
   "components": {
     "schemas": {
-      "Article": {
+      "Executive": {
         "required": [
-          "id",
-          "title",
-          "htmlText"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
+          "name": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string"
-          },
-          "articleImage": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -570,60 +568,28 @@
               }
             }
           },
-          "htmlText": {
-            "type": "string"
+          "media": {
+            "type": "json"
           },
-          "users": {
+          "divisions": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "username",
-                "email",
-                "activeExec",
-                "title"
+                "title",
+                "description"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "activeExec": {
-                  "type": "boolean"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "media": {
-                  "type": "json"
-                },
                 "title": {
                   "type": "string"
                 },
-                "posts": {
+                "description": {
+                  "type": "string"
+                },
+                "announcements": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -635,97 +601,45 @@
                     "type": "string"
                   }
                 },
-                "events": {
+                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "name": {
-                  "type": "string"
-                },
-                "divisions": {
+                "executives": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                }
-              }
-            }
-          },
-          "division": {
-            "required": [
-              "id",
-              "title",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "announcements": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "seminars": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "executives": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
           }
         }
       },
-      "NewArticle": {
-        "required": [
-          "title",
-          "htmlText"
-        ],
+      "NewExecutive": {
         "properties": {
+          "name": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string"
+          "media": {
+            "type": "json"
           },
-          "htmlText": {
-            "type": "string"
-          },
-          "users": {
+          "divisions": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "division": {
-            "type": "string"
           }
         }
       }
@@ -733,7 +647,7 @@
   },
   "tags": [
     {
-      "name": "Article"
+      "name": "Executive"
     }
   ]
 }

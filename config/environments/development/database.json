@@ -5,13 +5,15 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "host": "127.0.0.1",
+        "host": "cluster0-shard-00-00-a5uoq.mongodb.net:27017,cluster0-shard-00-01-a5uoq.mongodb.net:27017,cluster0-shard-00-02-a5uoq.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
         "port": 27017,
         "database": "csec_cms",
-        "username": "",
+        "username": "csec",
         "password": ""
       },
-      "options": {}
+      "options": {
+        "ssl": true
+      }
     }
   }
 }
