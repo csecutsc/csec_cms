@@ -1220,53 +1220,6 @@
           "title": {
             "type": "string"
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "date",
-                "body",
-                "active"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "date": {
-                  "type": "string"
-                },
-                "files": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "body": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "cardImage": {
-                  "type": "string"
-                },
-                "codeInputText": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "division": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "articles": {
             "type": "array",
             "items": {
@@ -1366,19 +1319,7 @@
                 "description": {
                   "type": "string"
                 },
-                "announcements": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -1391,6 +1332,12 @@
                   }
                 },
                 "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -1447,12 +1394,6 @@
           },
           "title": {
             "type": "string"
-          },
-          "posts": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "articles": {
             "type": "array",

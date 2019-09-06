@@ -21,22 +21,34 @@
       "required": true
     },
     "date": {
-      "type": "date"
-    },
-    "resources": {
-      "collection": "file",
-      "via": "related",
-      "plugin": "upload"
-    },
-    "cardImage": {
-      "type": "string"
+      "type": "date",
+      "required": true
     },
     "archived": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": true
     },
     "division": {
       "model": "division",
       "via": "seminars"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "additionalLinks": {
+      "type": "json"
+    },
+    "slideUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "sourceLink": {
+      "type": "string",
+      "default": ""
     }
   }
 }

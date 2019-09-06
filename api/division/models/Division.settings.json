@@ -20,16 +20,8 @@
       "type": "text",
       "required": true
     },
-    "announcements": {
-      "collection": "announcement",
-      "via": "division"
-    },
     "articles": {
       "collection": "article",
-      "via": "division"
-    },
-    "seminars": {
-      "collection": "seminar",
       "via": "division"
     },
     "executives": {
@@ -41,6 +33,10 @@
       "via": "divisions",
       "dominant": true,
       "plugin": "users-permissions"
+    },
+    "seminars": {
+      "collection": "seminar",
+      "via": "division"
     }
   }
 }

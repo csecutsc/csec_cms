@@ -617,12 +617,6 @@
                 "title": {
                   "type": "string"
                 },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
                   "type": "array",
                   "items": {

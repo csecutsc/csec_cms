@@ -73,10 +73,6 @@
       "type": "string",
       "required": true
     },
-    "posts": {
-      "collection": "announcement",
-      "via": "user"
-    },
     "articles": {
       "collection": "article",
       "via": "users"

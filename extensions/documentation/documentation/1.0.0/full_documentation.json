@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/27/2019 1:21:11 AM"
+    "x-generation-date": "09/06/2019 12:08:01 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -534,1016 +534,6 @@
         "summary": "",
         "tags": [
           "Album"
-        ],
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/announcements": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Announcement"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Announcement"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Announcement"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Announcement"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAnnouncement"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/announcements/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Announcement"
-        ],
-        "parameters": []
-      }
-    },
-    "/announcements/{_id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Announcement"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Announcement"
-        ],
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Announcement"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Announcement"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAnnouncement"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Announcement"
-        ],
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/archiveds": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Archived"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Archived"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Archived"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Archived"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewArchived"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/archiveds/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Archived"
-        ],
-        "parameters": []
-      }
-    },
-    "/archiveds/{_id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Archived"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Archived"
-        ],
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Archived"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Archived"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewArchived"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Archived"
         ],
         "parameters": [
           {
@@ -6733,366 +5723,6 @@
           }
         }
       },
-      "Announcement": {
-        "required": [
-          "id",
-          "title",
-          "date",
-          "body",
-          "active"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "date": {
-            "type": "string"
-          },
-          "files": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "public_id": {
-                  "type": "string"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "body": {
-            "type": "string"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
-          },
-          "cardImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "codeInputText": {
-            "type": "string"
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email",
-              "activeExec",
-              "title"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "activeExec": {
-                "type": "boolean"
-              },
-              "image": {
-                "type": "string"
-              },
-              "media": {
-                "type": "json"
-              },
-              "title": {
-                "type": "string"
-              },
-              "posts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "events": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "name": {
-                "type": "string"
-              },
-              "divisions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "division": {
-            "required": [
-              "id",
-              "title",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "announcements": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "seminars": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "executives": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewAnnouncement": {
-        "required": [
-          "title",
-          "date",
-          "body",
-          "active"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "date": {
-            "type": "string"
-          },
-          "body": {
-            "type": "string"
-          },
-          "active": {
-            "type": "boolean",
-            "default": true
-          },
-          "codeInputText": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          },
-          "division": {
-            "type": "string"
-          }
-        }
-      },
-      "Archived": {
-        "required": [
-          "id",
-          "title",
-          "description"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "cardImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "description": {
-            "type": "string"
-          }
-        }
-      },
-      "NewArchived": {
-        "required": [
-          "title",
-          "description"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          }
-        }
-      },
       "Article": {
         "required": [
           "id",
@@ -7208,12 +5838,6 @@
                 "title": {
                   "type": "string"
                 },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
                   "type": "array",
                   "items": {
@@ -7254,19 +5878,7 @@
               "description": {
                 "type": "string"
               },
-              "announcements": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "seminars": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -7279,6 +5891,12 @@
                 }
               },
               "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "seminars": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -7330,53 +5948,6 @@
           "description": {
             "type": "string"
           },
-          "announcements": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "date",
-                "body",
-                "active"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "date": {
-                  "type": "string"
-                },
-                "files": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "body": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "cardImage": {
-                  "type": "string"
-                },
-                "codeInputText": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "division": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "articles": {
             "type": "array",
             "items": {
@@ -7406,45 +5977,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "division": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "seminars": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "date": {
-                  "type": "string"
-                },
-                "resources": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cardImage": {
-                  "type": "string"
-                },
-                "archived": {
-                  "type": "boolean"
                 },
                 "division": {
                   "type": "string"
@@ -7533,12 +6065,6 @@
                 "title": {
                   "type": "string"
                 },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
                   "type": "array",
                   "items": {
@@ -7562,6 +6088,51 @@
                 }
               }
             }
+          },
+          "seminars": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description",
+                "date",
+                "archived",
+                "image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "boolean"
+                },
+                "division": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "additionalLinks": {
+                  "type": "json"
+                },
+                "slideUrl": {
+                  "type": "string"
+                },
+                "sourceLink": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -7577,19 +6148,7 @@
           "description": {
             "type": "string"
           },
-          "announcements": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "articles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "seminars": {
             "type": "array",
             "items": {
               "type": "string"
@@ -7602,6 +6161,12 @@
             }
           },
           "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "seminars": {
             "type": "array",
             "items": {
               "type": "string"
@@ -7734,12 +6299,6 @@
               },
               "title": {
                 "type": "string"
-              },
-              "posts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "articles": {
                 "type": "array",
@@ -7880,19 +6439,7 @@
                 "description": {
                   "type": "string"
                 },
-                "announcements": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -7905,6 +6452,12 @@
                   }
                 },
                 "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -7964,7 +6517,10 @@
         "required": [
           "id",
           "title",
-          "description"
+          "description",
+          "date",
+          "archived",
+          "image"
         ],
         "properties": {
           "id": {
@@ -7979,60 +6535,9 @@
           "date": {
             "type": "string"
           },
-          "resources": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "public_id": {
-                  "type": "string"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "cardImage": {
-            "type": "string"
-          },
           "archived": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "division": {
             "required": [
@@ -8050,19 +6555,7 @@
               "description": {
                 "type": "string"
               },
-              "announcements": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "seminars": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -8079,15 +6572,80 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "seminars": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
+          },
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "public_id": {
+                "type": "string"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalLinks": {
+            "type": "json"
+          },
+          "slideUrl": {
+            "type": "string",
+            "default": ""
+          },
+          "sourceLink": {
+            "type": "string",
+            "default": ""
           }
         }
       },
       "NewSeminar": {
         "required": [
           "title",
-          "description"
+          "description",
+          "date",
+          "archived"
         ],
         "properties": {
           "title": {
@@ -8099,14 +6657,23 @@
           "date": {
             "type": "string"
           },
-          "cardImage": {
-            "type": "string"
-          },
           "archived": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "division": {
             "type": "string"
+          },
+          "additionalLinks": {
+            "type": "json"
+          },
+          "slideUrl": {
+            "type": "string",
+            "default": ""
+          },
+          "sourceLink": {
+            "type": "string",
+            "default": ""
           }
         }
       },
@@ -8213,12 +6780,6 @@
                 },
                 "title": {
                   "type": "string"
-                },
-                "posts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "articles": {
                   "type": "array",
@@ -8394,53 +6955,6 @@
           "title": {
             "type": "string"
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "date",
-                "body",
-                "active"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "date": {
-                  "type": "string"
-                },
-                "files": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "body": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "cardImage": {
-                  "type": "string"
-                },
-                "codeInputText": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "division": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "articles": {
             "type": "array",
             "items": {
@@ -8540,19 +7054,7 @@
                 "description": {
                   "type": "string"
                 },
-                "announcements": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -8565,6 +7067,12 @@
                   }
                 },
                 "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -8622,12 +7130,6 @@
           "title": {
             "type": "string"
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "articles": {
             "type": "array",
             "items": {
@@ -8678,12 +7180,6 @@
   "tags": [
     {
       "name": "Album"
-    },
-    {
-      "name": "Announcement"
-    },
-    {
-      "name": "Archived"
     },
     {
       "name": "Article"

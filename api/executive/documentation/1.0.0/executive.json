@@ -589,19 +589,7 @@
                 "description": {
                   "type": "string"
                 },
-                "announcements": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "articles": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -614,6 +602,12 @@
                   }
                 },
                 "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "seminars": {
                   "type": "array",
                   "items": {
                     "type": "string"

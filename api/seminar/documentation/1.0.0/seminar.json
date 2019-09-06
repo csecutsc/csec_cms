@@ -512,7 +512,10 @@
         "required": [
           "id",
           "title",
-          "description"
+          "description",
+          "date",
+          "archived",
+          "image"
         ],
         "properties": {
           "id": {
@@ -527,60 +530,9 @@
           "date": {
             "type": "string"
           },
-          "resources": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "public_id": {
-                  "type": "string"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "cardImage": {
-            "type": "string"
-          },
           "archived": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "division": {
             "required": [
@@ -598,19 +550,7 @@
               "description": {
                 "type": "string"
               },
-              "announcements": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "seminars": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -627,15 +567,80 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "seminars": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
+          },
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "public_id": {
+                "type": "string"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalLinks": {
+            "type": "json"
+          },
+          "slideUrl": {
+            "type": "string",
+            "default": ""
+          },
+          "sourceLink": {
+            "type": "string",
+            "default": ""
           }
         }
       },
       "NewSeminar": {
         "required": [
           "title",
-          "description"
+          "description",
+          "date",
+          "archived"
         ],
         "properties": {
           "title": {
@@ -647,14 +652,23 @@
           "date": {
             "type": "string"
           },
-          "cardImage": {
-            "type": "string"
-          },
           "archived": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": true
           },
           "division": {
             "type": "string"
+          },
+          "additionalLinks": {
+            "type": "json"
+          },
+          "slideUrl": {
+            "type": "string",
+            "default": ""
+          },
+          "sourceLink": {
+            "type": "string",
+            "default": ""
           }
         }
       }
