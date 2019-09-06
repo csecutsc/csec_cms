@@ -29,10 +29,6 @@
       "required": true,
       "default": true
     },
-    "division": {
-      "model": "division",
-      "via": "seminars"
-    },
     "image": {
       "model": "file",
       "via": "related",
@@ -49,6 +45,10 @@
     "sourceLink": {
       "type": "string",
       "default": ""
+    },
+    "division": {
+      "model": "division",
+      "via": "seminars"
     }
   }
 }

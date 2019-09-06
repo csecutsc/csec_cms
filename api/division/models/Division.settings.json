@@ -37,6 +37,11 @@
     "seminars": {
       "collection": "seminar",
       "via": "division"
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": true
     }
   }
 }

@@ -28,8 +28,8 @@
     },
     "divisions": {
       "collection": "division",
-      "via": "executives",
-      "dominant": true
+      "dominant": true,
+      "via": "executives"
     }
   }
 }

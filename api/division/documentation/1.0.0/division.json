@@ -512,7 +512,8 @@
         "required": [
           "id",
           "title",
-          "description"
+          "description",
+          "order"
         ],
         "properties": {
           "id": {
@@ -647,12 +648,6 @@
                     "type": "string"
                   }
                 },
-                "events": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "name": {
                   "type": "string"
                 },
@@ -692,9 +687,6 @@
                 "archived": {
                   "type": "boolean"
                 },
-                "division": {
-                  "type": "string"
-                },
                 "image": {
                   "type": "string"
                 },
@@ -706,16 +698,23 @@
                 },
                 "sourceLink": {
                   "type": "string"
+                },
+                "division": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "order": {
+            "type": "integer"
           }
         }
       },
       "NewDivision": {
         "required": [
           "title",
-          "description"
+          "description",
+          "order"
         ],
         "properties": {
           "title": {
@@ -747,6 +746,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "order": {
+            "type": "integer"
           }
         }
       }

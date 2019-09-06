@@ -1256,48 +1256,6 @@
               }
             }
           },
-          "events": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "startTime",
-                "location",
-                "active"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "startTime": {
-                  "type": "string"
-                },
-                "endTime": {
-                  "type": "string"
-                },
-                "location": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "cardImage": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "name": {
             "type": "string"
           },
@@ -1307,7 +1265,8 @@
               "required": [
                 "id",
                 "title",
-                "description"
+                "description",
+                "order"
               ],
               "properties": {
                 "id": {
@@ -1342,6 +1301,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "order": {
+                  "type": "integer"
                 }
               }
             }
@@ -1396,12 +1358,6 @@
             "type": "string"
           },
           "articles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "events": {
             "type": "array",
             "items": {
               "type": "string"

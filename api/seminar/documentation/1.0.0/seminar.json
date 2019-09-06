@@ -534,48 +534,6 @@
             "type": "boolean",
             "default": true
           },
-          "division": {
-            "required": [
-              "id",
-              "title",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "executives": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "seminars": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "image": {
             "required": [
               "id",
@@ -632,6 +590,52 @@
           "sourceLink": {
             "type": "string",
             "default": ""
+          },
+          "division": {
+            "required": [
+              "id",
+              "title",
+              "description",
+              "order"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "executives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "seminars": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "order": {
+                "type": "integer"
+              }
+            }
           }
         }
       },
@@ -656,9 +660,6 @@
             "type": "boolean",
             "default": true
           },
-          "division": {
-            "type": "string"
-          },
           "additionalLinks": {
             "type": "json"
           },
@@ -669,6 +670,9 @@
           "sourceLink": {
             "type": "string",
             "default": ""
+          },
+          "division": {
+            "type": "string"
           }
         }
       }

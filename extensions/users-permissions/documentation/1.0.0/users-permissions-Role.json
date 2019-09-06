@@ -623,12 +623,6 @@
                     "type": "string"
                   }
                 },
-                "events": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "name": {
                   "type": "string"
                 },

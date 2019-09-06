@@ -77,10 +77,6 @@
       "collection": "article",
       "via": "users"
     },
-    "events": {
-      "collection": "event",
-      "via": "user"
-    },
     "name": {
       "type": "string"
     },
